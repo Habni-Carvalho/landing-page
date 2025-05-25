@@ -2,42 +2,67 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>FAESF - Inscreva-se</title>
+  <title>Contato FAESF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
+      margin: 0;
+      padding: 40px;
       text-align: center;
-      padding: 50px;
     }
     h1 {
       color: #2c3e50;
+      margin-bottom: 10px;
     }
     p {
+      color: #666;
       font-size: 18px;
-      color: #555;
+      margin-bottom: 30px;
     }
-    .cta-button {
+    form {
+      background: white;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
       background-color: #2e86de;
       color: white;
-      padding: 15px 30px;
+      padding: 12px 20px;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
       font-size: 16px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
+      cursor: pointer;
     }
-    .cta-button:hover {
+    button:hover {
       background-color: #1e5fad;
     }
   </style>
 </head>
 <body>
-  <h1>Venha estudar na FAESF</h1>
-  <p>Garanta sua vaga com qualidade e excelência no ensino superior.</p>
-  <a href="https://wa.me/5598999999999" target="_blank" class="cta-button">Fale com a gente</a>
+  <h1>Fale com a FAESF</h1>
+  <p>Preencha o formulário abaixo e responderemos o mais rápido possível.</p>
+  <form action="https://formsubmit.co/hpc@faesf.com.br" method="POST">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+
+    <!-- Proteções extras (opcional) -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+  </form>
 </body>
 </html>
