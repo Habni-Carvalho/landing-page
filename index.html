@@ -2,67 +2,134 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Contato FAESF</title>
+  <title>Grupo Educacional São Francisco</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
-      margin: 0;
-      padding: 40px;
+    }
+
+    header {
+      background-color: #001f36;
       text-align: center;
     }
-    h1 {
-      color: #2c3e50;
-      margin-bottom: 10px;
+
+    header img {
+      max-width: 100%;
+      height: auto;
     }
-    p {
-      color: #666;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    form {
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
       background: white;
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 30px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #2e86de;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background-color: #1e5fad;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
     input, textarea {
       width: 100%;
-      padding: 12px;
-      margin: 8px 0;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 16px;
     }
+
     button {
       background-color: #2e86de;
       color: white;
-      padding: 12px 20px;
       border: none;
+      padding: 12px 20px;
       border-radius: 5px;
-      font-size: 16px;
       cursor: pointer;
+      font-size: 16px;
     }
+
     button:hover {
       background-color: #1e5fad;
+    }
+
+    footer {
+      background: #001f36;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Fale com a FAESF</h1>
-  <p>Preencha o formulário abaixo e responderemos o mais rápido possível.</p>
-  <form action="https://formsubmit.co/hpc@faesf.com.br" method="POST">
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu e-mail" required>
-    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-    <button type="submit">Enviar</button>
 
-    <!-- Proteções extras (opcional) -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-  </form>
+  <header>
+    <img src="https://raw.githubusercontent.com/Habni-Carvalho/landing-page/main/Cabe%C3%A7alho_Grupo_Educacional_S%C3%A3o_Francisco.png" alt="Grupo Educacional São Francisco">
+  </header>
+
+  <section>
+    <h1>Sobre o Grupo Educacional São Francisco</h1>
+    <p>O Grupo Educacional São Francisco é formado pelo Colégio São Francisco (CSF) e pela Faculdade de Educação São Francisco (FAESF). Nossa missão é transformar vidas por meio de uma educação cristã, comprometida com o desenvolvimento humano, intelectual e profissional.</p>
+  </section>
+
+  <section>
+    <h2>Cursos Oferecidos</h2>
+    <p>• Pedagogia<br>
+       • Administração<br>
+       • Serviço Social<br>
+       • Matemática<br>
+       • Ciências Contábeis<br>
+       • Pós-graduações em diversas áreas</p>
+
+    <a class="button" href="https://faesf.com.br" target="_blank">Acesse o site da FAESF</a>
+  </section>
+
+  <section>
+    <h2>Fale Conosco</h2>
+    <form action="https://formsubmit.co/hpc@faesf.com.br" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Grupo Educacional São Francisco. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
