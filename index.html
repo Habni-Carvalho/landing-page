@@ -5,15 +5,52 @@
   <title>Grupo Educacional São Francisco</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
     }
 
+    /* MENU FIXO */
+    nav {
+      background: #001f36;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
     header {
-      background-color: #001f36;
+      margin-top: 70px;
       text-align: center;
+      background-color: #001f36;
     }
 
     header img {
@@ -94,31 +131,43 @@
 </head>
 <body>
 
+  <!-- MENU -->
+  <nav>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CABEÇALHO -->
   <header>
     <img src="https://raw.githubusercontent.com/Habni-Carvalho/landing-page/main/Cabe%C3%A7alho_Grupo_Educacional_S%C3%A3o_Francisco.png" alt="Grupo Educacional São Francisco">
   </header>
 
-  <section>
+  <!-- SOBRE -->
+  <section id="sobre">
     <h1>Sobre o Grupo Educacional São Francisco</h1>
     <p>O Grupo Educacional São Francisco é formado pelo Colégio São Francisco (CSF) e pela Faculdade de Educação São Francisco (FAESF). Nossa missão é transformar vidas por meio de uma educação cristã, comprometida com o desenvolvimento humano, intelectual e profissional.</p>
   </section>
 
-  <section>
+  <!-- CURSOS -->
+  <section id="cursos">
     <h2>Cursos Oferecidos</h2>
     <p>• Pedagogia<br>
        • Administração<br>
-       • Direito<br>
        • Enfermagem<br>
-       • Fisioterapia<br>
-       • Educação Física<br>
        • Nutrição<br>
+       • Direito<br>
+       • Educação Física<br>
+       • Fisioterapia<br>
        • Ciências Contábeis<br>
        • Pós-graduações em diversas áreas</p>
-
     <a class="button" href="https://faesf.com.br" target="_blank">Acesse o site da FAESF</a>
   </section>
 
-  <section>
+  <!-- CONTATO -->
+  <section id="contato">
     <h2>Fale Conosco</h2>
     <form action="https://formsubmit.co/hpc@faesf.com.br" method="POST">
       <input type="text" name="nome" placeholder="Seu nome" required>
@@ -130,6 +179,7 @@
     </form>
   </section>
 
+  <!-- RODAPÉ -->
   <footer>
     © 2025 Grupo Educacional São Francisco. Todos os direitos reservados.
   </footer>
