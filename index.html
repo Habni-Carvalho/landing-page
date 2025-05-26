@@ -2,188 +2,94 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Grupo Educacional São Francisco</title>
+  <title>Contato FAESF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
-    }
-
-    /* MENU FIXO */
-    nav {
-      background: #001f36;
-      padding: 15px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
       margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 0 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      margin-top: 70px;
+      padding: 40px;
       text-align: center;
-      background-color: #001f36;
     }
-
-    header img {
-      max-width: 100%;
-      height: auto;
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
     }
-
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
+    p {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    form {
       background: white;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 30px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      scroll-margin-top: 90px; /* corrige corte causado pelo menu fixo */
     }
-
-    h1, h2 {
-      color: #2c3e50;
-    }
-
-    p {
-      color: #555;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 20px;
-      background-color: #2e86de;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    a.button:hover {
-      background-color: #1e5fad;
-    }
-
-    form {
-      margin-top: 30px;
-    }
-
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 15px;
+      padding: 12px;
+      margin: 8px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 16px;
     }
-
     button {
       background-color: #2e86de;
       color: white;
-      border: none;
       padding: 12px 20px;
+      border: none;
       border-radius: 5px;
-      cursor: pointer;
       font-size: 16px;
+      cursor: pointer;
     }
-
     button:hover {
       background-color: #1e5fad;
     }
-
-    footer {
-      background: #001f36;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    .mensagem-sucesso {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- MENU -->
-  <nav>
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#cursos">Cursos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+  <h1>Fale com a FAESF</h1>
+  <p>Preencha o formulário abaixo. Sua mensagem será enviada para nossa equipe.</p>
 
-  <!-- CABEÇALHO -->
-  <header>
-    <img src="https://raw.githubusercontent.com/Habni-Carvalho/landing-page/main/cabecalho_grupo_educacional_sf.png" alt="Grupo Educacional São Francisco">
-  </header>
+  <form id="formulario">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 
-  <!-- SOBRE -->
-  <section id="sobre">
-    <h1>Sobre o Grupo Educacional São Francisco</h1>
-    <p>O Grupo Educacional São Francisco é formado pelo Colégio São Francisco (CSF) e pela Faculdade de Educação São Francisco (FAESF). Nossa missão é transformar vidas por meio de uma educação cristã, comprometida com o desenvolvimento humano, intelectual e profissional.</p>
-  </section>
+  <div class="mensagem-sucesso" id="mensagem"></div>
 
-  <!-- CURSOS -->
-  <section id="cursos">
-    <h2>Cursos Oferecidos</h2>
-    <p>• Pedagogia<br>
-       • Administração<br>
-       • Enfermagem<br>
-       • Nutrição<br>
-       • Direito<br>
-       • Educação Física<br>
-       • Fisioterapia<br>
-       • Ciências Contábeis<br>
-       • Pós-graduações em diversas áreas</p>
-    <a class="button" href="https://faesf.com.br" target="_blank">Acesse o site da FAESF</a>
-  </section>
+  <script>
+    const scriptURL = "https://script.google.com/a/macros/faesf.com.br/s/AKfycbwIfOrZuuJddEUxDSh4Hq0NPFk--2GFO4JPXLtT4XbQWz1f6NFLQ43qDM7df2uX30sW4w/exec";
+    const form = document.getElementById("formulario");
+    const msg = document.getElementById("mensagem");
 
-  <!-- CONTATO -->
-  <section id="contato">
-    <h2>Fale Conosco</h2>
-    <form action="https://formsubmit.co/hpc@faesf.com.br" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-    </form>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer>
-    © 2025 Grupo Educacional São Francisco. Todos os direitos reservados.
-  </footer>
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form)
+      })
+      .then(response => {
+        msg.innerHTML = "Mensagem enviada com sucesso!";
+        form.reset();
+      })
+      .catch(error => {
+        msg.innerHTML = "Erro ao enviar. Tente novamente.";
+      });
+    });
+  </script>
 
 </body>
 </html>
